@@ -15,4 +15,11 @@ class urinalsTest {
         System.out.println("===== Test 1 - Check if 101 is good =====");
         Assertions.assertEquals(true,urinalObj.goodString("101"));
     }
+
+    @Test
+    void testGoodString2() {
+        System.out.println("===== Test 2 - Check if 110 is good =====");
+        Assertions.assertEquals(true,urinalObj.goodString("110"));
+    }
+
 }
