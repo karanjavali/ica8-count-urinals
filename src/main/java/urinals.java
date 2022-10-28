@@ -1,5 +1,5 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 
 /**
  * @author Karan Navin Javali
@@ -50,6 +50,19 @@ public class urinals {
                 }
             }
         }
+    }
+
+    // write output to txt file
+    void writeToFile(File fileName, ArrayList<Integer> outputs) {
+        FileOutputStream fileOutputStream = new FileOutputStream(fileName);
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
+
+        for (int i = 0; i < outputs.size(); i++) {
+            writer.write(Integer.toString(outputs.get(i)));
+            writer.newLine();
+        }
+
+        writer.close();
     }
 
 }
