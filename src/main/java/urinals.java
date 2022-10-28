@@ -27,7 +27,7 @@ public class urinals {
         return true;
     }
 
-    File getFile() throws IOException {
+    File getFile()  {
         String completePath = "src/main/java/";
         String fileName = "rule";
         String extension = ".txt";

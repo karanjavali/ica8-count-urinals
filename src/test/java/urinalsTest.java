@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -9,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class urinalsTest {
 
     urinals urinalObj = new urinals();
-
+    String completePath = "src/main/java/rule";
     @Test
     void testGoodString1() {
         System.out.println("===== Test 1 - Check if 101 is good =====");
@@ -29,5 +31,10 @@ class urinalsTest {
     }
 
 
-
+    @Test
+    void testGetFile1() {
+        System.out.println("===== Test 1 - Check if rule.txt is created =====");
+        File newFile = new File(completePath+".txt");
+        Assertions.assertEquals(newFile,urinalObj.getFile());
+    }
 }
