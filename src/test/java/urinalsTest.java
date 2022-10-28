@@ -38,4 +38,11 @@ class urinalsTest {
         File newFile = new File(completePath+".txt");
         Assertions.assertEquals(newFile,urinalObj.getFile());
     }
+
+    @Test
+    void testGetFile2() throws IOException {
+        System.out.println("===== Test 1 - Check if rule.txt is created =====");
+        File newFile = new File(completePath+"3.txt");
+        Assertions.assertEquals(newFile,urinalObj.getFile());
+    }
 }
