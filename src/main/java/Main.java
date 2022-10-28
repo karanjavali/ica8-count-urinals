@@ -43,6 +43,7 @@ public class Main {
                 System.out.println("Please enter the input string");
                 inputSc.nextLine();
                 String str = inputSc.nextLine();
+                System.out.println("Output :- ");
                 System.out.println(obj.numberOfUrinals(str));
                 break;
             default:
