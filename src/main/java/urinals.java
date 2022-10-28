@@ -53,16 +53,24 @@ public class urinals {
     }
 
     // write output to txt file
-    void writeToFile(File fileName, ArrayList<Integer> outputs) {
-        FileOutputStream fileOutputStream = new FileOutputStream(fileName);
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
+    boolean writeToFile(File fileName, ArrayList<Integer> outputs) {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(fileName);
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
 
-        for (int i = 0; i < outputs.size(); i++) {
-            writer.write(Integer.toString(outputs.get(i)));
-            writer.newLine();
+            for (int i = 0; i < outputs.size(); i++) {
+                writer.write(Integer.toString(outputs.get(i)));
+                writer.newLine();
+            }
+
+            writer.close();
+            return true;
+        }
+        catch (Exception e) {
+            return false;
+
         }
 
-        writer.close();
     }
 
 }
