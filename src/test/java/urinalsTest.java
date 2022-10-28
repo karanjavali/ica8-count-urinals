@@ -83,4 +83,10 @@ class urinalsTest {
         Assertions.assertEquals(1, urinalObj.numberOfUrinals("10001"));
     }
 
+    @Test
+    void testNumberOfUrinals2() {
+        System.out.println("===== Test 2 - Check if 100 returns 1 =====");
+        Assertions.assertEquals(1, urinalObj.numberOfUrinals("100"));
+    }
+
 }
