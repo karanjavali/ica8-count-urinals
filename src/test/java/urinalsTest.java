@@ -89,4 +89,11 @@ class urinalsTest {
         Assertions.assertEquals(1, urinalObj.numberOfUrinals("100"));
     }
 
+    @Test
+    void testNumberOfUrinals3() {
+        System.out.println("===== Test 3 - Check output of random string =====");
+        Assertions.assertEquals(1, urinalObj.numberOfUrinals("Karan"));
+    }
+
+
 }
