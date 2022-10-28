@@ -73,4 +73,31 @@ public class urinals {
 
     }
 
+
+    int numberOfUrinals(String str) {
+        if(!goodString(str)) {
+            return -1;
+        }
+        int numUrinals = 0;
+        boolean prevZero = true;
+        for(int i=0;i<str.length();i++) {
+            if (str.charAt(i) == '0') {
+                if (prevZero) {
+                    if((i+1) == str.length() || str.charAt(i+1) == '0'){
+                        numUrinals++;
+                        prevZero = false;
+                    }
+                }
+                else {
+                    prevZero = true;
+                }
+            }
+            else {
+                prevZero = false;
+            }
+        }
+
+        return numUrinals;
+    }
+
 }
