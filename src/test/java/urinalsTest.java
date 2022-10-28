@@ -22,4 +22,10 @@ class urinalsTest {
         Assertions.assertEquals(true,urinalObj.goodString("110"));
     }
 
+    @Test
+    void testGoodString3() {
+        System.out.println("===== Test 3 - Check if Karan is not good =====");
+        Assertions.assertEquals(false,urinalObj.goodString("Karan"));
+    }
+
 }
