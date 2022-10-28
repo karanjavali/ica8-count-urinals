@@ -77,5 +77,10 @@ class urinalsTest {
         Assertions.assertEquals(true, urinalObj.writeToFile(newFile,outputs));
     }
 
+    @Test
+    void testNumberOfUrinals1() {
+        System.out.println("===== Test 1 - Check if 10001 returns 1 =====");
+        Assertions.assertEquals(1, urinalObj.numberOfUrinals("10001"));
+    }
 
 }
