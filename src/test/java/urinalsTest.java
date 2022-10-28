@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,7 +33,7 @@ class urinalsTest {
 
 
     @Test
-    void testGetFile1() {
+    void testGetFile1() throws IOException {
         System.out.println("===== Test 1 - Check if rule.txt is created =====");
         File newFile = new File(completePath+".txt");
         Assertions.assertEquals(newFile,urinalObj.getFile());
