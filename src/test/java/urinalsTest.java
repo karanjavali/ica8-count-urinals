@@ -39,7 +39,7 @@ class urinalsTest {
     @Test
     void testGoodString2() {
         System.out.println("===== Test 2 - Check if 110 is good =====");
-        Assertions.assertEquals(true,urinalObj.goodString("110"));
+        Assertions.assertEquals(false,urinalObj.goodString("110")); // change expected
     }
 
     @Test
@@ -53,14 +53,14 @@ class urinalsTest {
     void testGetFile1() throws IOException {
         System.out.println("===== Test 1 - Check if rule.txt is created =====");
         File newFile = new File(completePath+".txt");
-        Assertions.assertEquals(newFile,urinalObj.getFile());
+        Assertions.assertEquals(newFile,urinalObj.getFile()); // first file to be created
     }
 
     @Test
     void testGetFile2() throws IOException {
         System.out.println("===== Test 2 - Check if rule3.txt is created after rule.txt =====");
         File newFile = new File(completePath+"3.txt");
-        Assertions.assertEquals(newFile,urinalObj.getFile());
+        Assertions.assertEquals(newFile,urinalObj.getFile()); // 4th file to be created
     }
 
     @Test
@@ -92,7 +92,7 @@ class urinalsTest {
     @Test
     void testNumberOfUrinals3() {
         System.out.println("===== Test 3 - Check output of random string =====");
-        Assertions.assertEquals(1, urinalObj.numberOfUrinals("Karan"));
+        Assertions.assertEquals(-1, urinalObj.numberOfUrinals("Karan")); // change expected
     }
 
 
