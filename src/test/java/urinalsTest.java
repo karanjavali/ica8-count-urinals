@@ -70,6 +70,7 @@ class urinalsTest {
         Assertions.assertEquals(true, urinalObj.writeToFile(newFile,outputs));
     }
 
+    @Test
     void testWriteToFile2() {
         System.out.println("===== Test 2 - Check if output is written to rule4.txt =====");
         File newFile = new File(completePath+"4.txt");
